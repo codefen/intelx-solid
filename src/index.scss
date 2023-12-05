@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Scheme Light */
+:root {
+  --bg-light: #f1f1f1;
+  --bg-main: #f1f1f1;
+  --color-main: #222222;
+  --bg-black: #1f1f1f;
+  --color-black: #fdfdfd;
+  --sidebar-black: #fafafa;
+  --bg-codefend: #007bff;
+  --color-codefend: #fcfcfc;
+  --color-icon: #afafaf;
+  --color-border: #e5e5e5;
+  --focus-icon: #4a2f34;
+  --color-panel: #b3b3b3;
+  --font-color: #999999;
+  --font-alternative: #999999;
+  --sidebar-width: 24rem;
+  --navbar-height: 52px;
+  --main-black: #f7f7f7;
+  --input-background: #ffffff;
+  --input-font-color: #222222;
+  --text-color-main: #222222;
+  --text-color-alt: #929292;
+
+  --toolbar-text-color: #ffffff;
+  --toolbar-bg-color: #232323;
+
+  color-scheme: light;
+
+  // nuevos estilos
+
+  --text-large: 18px;
+  --text-small: 12px;
+  --text-color: #333333;
+  --text-color-alt: #333333;
+  --text-color-alt2: #007bff;
+  --text-color-alt3: #c2c2c2;
+
+  --btn-color-main: #0570e2;
+  --btn-color-alt: #333333;
+
+  --input-outline-color: #0570e2;
+
+  --higlights-color-line: #6f2121;
+  --highlights-color-bkg: #4c0b0b;
+
+  --padding-general: 0 3vw;
+  --padding-top-sections-c: 50px;
+
+  --section-alt-bkg: #f2f2f2;
+
+  --mobile-breakpoint: 768px;
+}
+
+/* If user prefers a dark appearance */
+@media (prefers-color-scheme: dark) {
+  // #brand img {
+  //     content: url("/src/assets/logo-light.svg");
+  // }
+  // .bg-color {
+  //     background-color: red !important;
+  // }
+  // body {
+  //     background-color: var(--bg-black);
+  // }
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto-Regular"),
+    url("./assets/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Questrial-Regular"),
+    url("./assets/Questrial-Regular.ttf") format("truetype");
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-y: hidden;
+  background-color: var(--bg-main);
+  font-family: Questrial;
+  color: var(--color-main);
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+* {
+  cursor: default;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: normal;
+  margin: 0px;
+}
+.custom-inx {
+  background-color: #f2f2f2;
+}
+
+.custom-inx:hover {
+  background-color: #dcedfd;
+}
+.container {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Questrial;
+}
+
+h2 {
+  color: #585858;
+}
+h3 {
+  color: var(--text-color-alt);
+}
+
+input {
+  font-size: 14px;
+}
+
+button {
+  font-weight: bold;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007bff;
+}
+
+
+.bg-codefend {
+  background-color: var(--bg-codefend) !important;
+  color: var(--color-codefend);
+}
+
+
+
+
+.sidebar {
+  position: fixed;
+  z-index: 990;
+  top: 0;
+  right: 0;
+}
+
+
+.sidebar section {
+  flex: 1;
+  height: 50vh;
+  overflow: auto;
+  padding: 20px
+}
+
+.leaks-category {
+  /* Additional styling specific to this section */
+}
+
+.previous-searches {
+  /* Additional styling specific to this section */
+}
+
+/* Add your specific table and list item styles here */
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+/* Additional styling for the chart */
+#pieChart {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+}
+
+/* Ensure the canvas element is a block-level element */
+canvas {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  color: var(--color-black) !important;
+}
+
+main {
+  margin-top: var(--navbar-height);
+  margin-right: var(--sidebar-width);
+  background-color: white;
+  color: var(--color-codefend);
+  height: 100vh;
+  display: flex;
+}
+
+.title-format {
+  font-family: Roboto;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--color-codefend);
+  color: var(--font-color);
+  color: black;
+  font-weight: bold;
+}
+
+.text-format p {
+  font-family: Questrial;
+  font-size: 14px;
+}
+
+.its-30 {
+  max-height: 23%;
+}
+.its-35 {
+  max-height: 28%;
+}
+
+.its-40 {
+  max-height: 34%;
+}
+
+
+
+.red-border {
+  border-left: 6px solid var(--bg-codefend);
+}
+
+
+.no-border-bottom {
+  border-bottom: 0px !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+.log-inputs {
+  background-color: var(--input-background);
+  color: var(--input-font-color) !important;
+  border: 1px solid var(--color-border);
+}
+
+.codefend-text-red {
+  color: var(--bg-codefend) !important;
+}
+
+.codefend-bg-red {
+  background-color: var(--bg-codefend) !important;
+}
+
+.codefend-border-red {
+  border: 1px solid var(--bg-codefend) !important;
+}
+
+.text-white {
+  color: var(--main-black) !important;
+}
+
+.text-gray {
+  color: var(--color-icon) !important;
+}
+
+.checkbox-color {
+  accent-color: var(--bg-codefend);
+}
+
+
+///////////////////////////////////////////////////////////////////
+// inputs
+//////////////////////////////////////////////////////////////////
+input {
+  height: 45px;
+  background-color: var(--input-background);
+  color: var(--input-font-color) !important;
+  border: 1px solid var(--color-border);
+  padding: 0 15px;
+
+  &.full-w {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: 0px solid;
+    border: 1px solid var(--input-outline-color);
+    // outline-color: var(--input-outline-color);
+  }
+}
+
+
+.text-alt3 {
+  color: var(--text-color-alt3);
+}
+
+
