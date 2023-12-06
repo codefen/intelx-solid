@@ -1,26 +1,28 @@
-# codefend-user
 
-*Installation:*
+# Intelx-Solid
 
-1) git clone https://github.com/codefen/codefend-user
-2) npm install
-3) npm start
+## Overview
+Intelx-Solid is an implementation of the IntelX API into a SolidJS Client.
 
-### *Run with Tauri*
-*Dependencies: https://www.rust-lang.org/*
+## Installation
+To install Intelx-Solid, follow these steps:
 
-```
-npm run tauri dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/codefen/intelx-solid
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd intelx-solid
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the application:
+   ```bash
+   npm start
+   ```
 
-### *Compile tauri*
-
-```
-npm run tauri build
-```
-
-### *Create priv and pub key for signing the Tauri app*
-
-```
-npm run tauri signer generate -- -w ~/.tauri/codefend.key
-```
+## Usage
+In order to use the application you must need to have an API Key from [IntelX](https://intelx.io/)

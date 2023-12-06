@@ -13,7 +13,6 @@ import createIntel from "../../Store/intel.jsx";
 function Sidebar() {
   const { intelData, setIntelData } = createIntel;
   const { intelHistory, setIntelHistory } = createIntel;
-  console.log(intelHistory())
   const [processedChartData, setProcessedCharData] = createSignal(processChartData(intelData()))
   const [topIntel, setTopIntel] = createSignal(topSorted(intelData()))
 
@@ -131,7 +130,7 @@ function topSorted(intelData) {
                 <p class="text-base w-4/6">search</p>
                 <p class="text-base w-2/6">date</p>
             </div>
-            {intelHistory().map((category, index) => (
+            {intelHistory().slice(0, 20).map((category, index) => (
               <div key={index} class="flex text-format">
                 <p class="w-4/6">{category.term}</p>
                 <p class="text-base w-2/6">{formatDate(category.date)}</p>

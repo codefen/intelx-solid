@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <>
-    <Show when={showModal() && showModalStr() === "api_modal"}>
+    <Show when={(showModal() && showModalStr() === "api_modal") || !window.localStorage.getItem('apikey')}>
       <div
         onClick={() => {
           setShowModal(!showModal());
@@ -36,7 +36,7 @@ function Navbar() {
             <div class="w-full w-96 px-8 disable-border">
               <div class="p-3 flex">
                 <p class="text-small text-left font-bold title-format">
-                  Which is your API key?
+                  Which is your API key? *
                 </p>
               </div>
               

@@ -15,7 +15,6 @@ function InxSearchAndData() {
   const [offset, setOffset] = createSignal(0);
   const [count, setCount] = createSignal(0);
 
-  console.log(intelData())
   
   const { searchStore, setSearchStore } = createSeach;
   
@@ -26,7 +25,6 @@ function InxSearchAndData() {
   }, [searchStore()]);
 
   function filterAndHighlightLinesWithUrl(inputText, urlToFilter) {
-    console.log(inputText);
     const lines = inputText.split("\n");
     const filteredLines = [];
     for (let i = 0; i < lines.length; i++) {
@@ -66,7 +64,6 @@ function InxSearchAndData() {
       localStorage.setItem('intelHistory', JSON.stringify(intHistory));
       setIntelHistory(intHistory)
       setIntelId(res.id);
-      console.log(intelId())
       //setCount(res.count);
       return procIntelSearch();
     } catch (err) {
@@ -120,7 +117,6 @@ function InxSearchAndData() {
         preview: res,
       });
       setIntelPreview(intelPreviewData);
-      console.log(intelPreview())
       let intelDataP = intelData();
       setIntelData([]);
       return setIntelData(intelDataP);
@@ -139,7 +135,6 @@ function InxSearchAndData() {
     }
     await time(4000);
     if (offset() < count()) {
-      console.log(intelData())
       localStorage.setItem('intelData', JSON.stringify(intelData()));
       localStorage.setItem('intelDataPreview', JSON.stringify(intelPreview()));
       setLoading(false);
